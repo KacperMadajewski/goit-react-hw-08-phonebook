@@ -25,6 +25,7 @@ const contactsSlice = createSlice({
   },
   extraReducers: {
     [fetchContacts.pending]: handlePending,
+    [fetchContacts.rejected]: handleRejected,
     [fetchContacts.fulfilled](state, action) {
       return {
         ...state,
@@ -33,9 +34,9 @@ const contactsSlice = createSlice({
         items: action.payload,
       };
     },
-    [fetchContacts.rejected]: handleRejected,
 
     [addContact.pending]: handlePending,
+    [addContact.rejected]: handleRejected,
     [addContact.fulfilled](state, action) {
       return {
         ...state,
@@ -44,9 +45,9 @@ const contactsSlice = createSlice({
         items: [action.payload, ...state.items],
       };
     },
-    [addContact.rejected]: handleRejected,
 
     [deleteContact.pending]: handlePending,
+    [deleteContact.rejected]: handleRejected,
     [deleteContact.fulfilled](state, action) {
       return {
         ...state,
@@ -55,7 +56,6 @@ const contactsSlice = createSlice({
         items: state.items.filter(item => item.id !== action.payload.id),
       };
     },
-    [deleteContact.rejected]: handleRejected,
   },
 });
 

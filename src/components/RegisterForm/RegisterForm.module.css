@@ -9,8 +9,8 @@
 }
 
 .button {
-  border: 1px solid #2b6cb0;
+  border: 1px solid darkslateblue;
   border-radius: 5px;
-  color: #2b6cb0;
+  color: darkslateblue;
   padding: 2px 10px;
 }

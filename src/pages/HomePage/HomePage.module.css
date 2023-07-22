@@ -1,10 +1,10 @@
-.wrapper {
+.header__box {
   position: absolute;
-  top: 20%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.header {
+.header__title {
   font-size: 24px;
 }
