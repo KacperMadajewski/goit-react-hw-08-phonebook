@@ -2,7 +2,7 @@ import { useAuth } from '../Hooks/useAuth';
 import { Navigation } from '../Navigation/Navigation';
 import { AuthNav } from '../AuthNav/AuthNav';
 
-import { UserMenu } from '../../components/userMenu/UserMenu';
+import { UserMenu } from 'components/UserMenu/UserMenu';
 import {
   AppBar,
   Box,

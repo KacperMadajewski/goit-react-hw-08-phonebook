@@ -1,22 +1,17 @@
-import css from './ContactListStyle.module.css';
+import css from './ContactsList.module.css';
 import { useDispatch } from 'react-redux';
-
 import { useSelector } from 'react-redux';
 import {
   selectError,
   selectFilteredContacts,
-  selectIsLoading,
+  selectLoading,
 } from '../../redux/selectors';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { deleteContact, fetchContacts } from '../../redux/operations';
 import { useEffect } from 'react';
 import {
-  Box,
   Button,
-  ButtonBase,
   Card,
-  Container,
-  CssBaseline,
   Link,
   Typography,
 } from '@mui/material';
@@ -25,7 +20,7 @@ import { EmojiPeople, Phone } from '@mui/icons-material';
 export const ContactList = () => {
   const dispatch = useDispatch();
   const filteredContacts = useSelector(selectFilteredContacts);
-  const isLoading = useSelector(selectIsLoading);
+  const Loading = useSelector(selectLoading);
   const error = useSelector(selectError);
   useEffect(() => {
     dispatch(fetchContacts());
@@ -41,7 +36,7 @@ export const ContactList = () => {
           paddingRight: '20px',
         }}
       >
-        {isLoading && !error ? (
+        {Loading && !error ? (
           <p>Contacts loading...</p>
         ) : filteredContacts.length === 0 && !error ? (
           <p>The Phonebook is empty. Add your first contact. </p>

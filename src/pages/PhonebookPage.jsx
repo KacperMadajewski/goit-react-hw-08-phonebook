@@ -1,15 +1,15 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { ContactForm } from '../components/ContactForm/ContactForm';
-import { ContactList } from '../components/ContactList/ContactList';
+import { ContactForm } from 'components/ContactsForm/ContactsForm';
+import { ContactList } from 'components/ContactsList/ContactsList';
 import { Filter } from '../components/Filter/Filter';
-import { selectIsLoading } from '../redux/selectors';
+import { selectLoading } from 'redux/selectors';
 import { useEffect } from 'react';
 import { fetchContacts } from '../redux/operations';
 import { Box } from '@mui/material';
 
 export const PhonebookPage = () => {
   const dispatch = useDispatch();
-  const isLoading = useSelector(selectIsLoading);
+  const Loading = useSelector(selectLoading);
 
   useEffect(() => {
     dispatch(fetchContacts());
@@ -44,7 +44,7 @@ export const PhonebookPage = () => {
         >
           <h2>Contacts</h2>
           <Filter />
-          <div>{isLoading && 'Loading contacts..'}</div>
+          <div>{Loading && 'Loading contacts..'}</div>
           <ContactList />
         </Box>
       </Box>
