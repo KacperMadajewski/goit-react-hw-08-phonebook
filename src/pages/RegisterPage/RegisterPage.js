@@ -1,4 +1,4 @@
-import { RegisterForm } from '../components/RegisterForm/RegisterForm';
+import { RegisterForm } from 'components/RegisterForm/RegisterFrom';
 
 export const RegisterPage = () => {
   return (
@@ -7,3 +7,5 @@ export const RegisterPage = () => {
     </div>
   );
 };
+
+export default RegisterPage;
