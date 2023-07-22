@@ -1,56 +1,52 @@
-import { createSlice } from '@reduxjs/toolkit';
-import { logIn, logOut, refreshUser, register } from './operations';
+import { register, logIn, logOut, refreshUser } from './operations';
+
+const { createSlice } = require('@reduxjs/toolkit');
 
 const initialState = {
   user: { name: null, email: null },
   token: null,
   isLoggedIn: false,
-  // isRefreshing: false,
-  error: null,
+  isRefreshing: false,
 };
 
 const authSlice = createSlice({
   name: 'auth',
   initialState,
   extraReducers: {
-    [register.fulfilled](state, action) {
-      //   state.isRefreshing=false
-    },
-    [register.pending](state, action) {
-      // state.isRefreshing= true
-    },
-    [register.rejected](state, action) {
-      state.error = action.payload;
-      //   state.isRefreshing=false
-    },
-    [logIn.fulfilled](state, action) {
-      state.user = action.payload.user;
-      state.token = action.payload.token;
+    [register.pending](state, actions) {},
+    [register.fulfilled](state, actions) {
+      state.user = actions.payload.user;
+      state.token = actions.payload.token;
       state.isLoggedIn = true;
-      //   state.isRefreshing=false
     },
-    [logIn.pending](state, action) {
-      // state.isRefreshing=true
-    },
-    [logIn.rejected](state, action) {
-      state.error = action.payload;
-      //   state.isRefreshing=false
-    },
-    [refreshUser.fulfilled](state, action) {
-      state.user = action.payload;
+    [register.rejected](state, actions) {},
+
+    [logIn.pending](state, actions) {},
+    [logIn.fulfilled](state, actions) {
+      state.user = actions.payload.user;
+      state.token = actions.payload.token;
       state.isLoggedIn = true;
-      state.isRefreshing = false;
     },
-    [refreshUser.pending](state, action) {
-      state.isRefreshing = true;
-    },
-    [refreshUser.rejected](state, action) {
-      state.isRefreshing = false;
-    },
-    [logOut.fulfilled](state) {
+    [logIn.rejected](state, actions) {},
+
+    [logOut.pending](state, actions) {},
+    [logOut.fulfilled](state, actions) {
       state.user = { name: null, email: null };
       state.token = null;
       state.isLoggedIn = false;
+    },
+    [logOut.rejected](state, actions) {},
+
+    [refreshUser.pending](state, actions) {
+      state.isRefreshing = true;
+    },
+    [refreshUser.fulfilled](state, actions) {
+      state.user = actions.payload;
+      state.isLoggedIn = true;
+      state.isRefreshing = false;
+    },
+    [refreshUser.rejected](state, actions) {
+      state.isRefreshing = false;
     },
   },
 });

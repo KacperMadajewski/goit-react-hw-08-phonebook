@@ -5,16 +5,11 @@ import {
   selectError,
   selectFilteredContacts,
   selectLoading,
-} from '../../redux/selectors';
+} from '../../redux/contacts/selectors';
 import DeleteIcon from '@mui/icons-material/Delete';
-import { deleteContact, fetchContacts } from '../../redux/operations';
+import { deleteContact, fetchContacts } from '../../redux/contacts/operations';
 import { useEffect } from 'react';
-import {
-  Button,
-  Card,
-  Link,
-  Typography,
-} from '@mui/material';
+import { Button, Card, Link, Typography } from '@mui/material';
 import { EmojiPeople, Phone } from '@mui/icons-material';
 
 export const ContactList = () => {

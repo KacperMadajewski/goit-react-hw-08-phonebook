@@ -2,9 +2,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { ContactForm } from 'components/ContactsForm/ContactsForm';
 import { ContactList } from 'components/ContactsList/ContactsList';
 import { Filter } from '../components/Filter/Filter';
-import { selectLoading } from 'redux/selectors';
+import { selectLoading } from 'redux/contacts/selectors';
 import { useEffect } from 'react';
-import { fetchContacts } from '../redux/operations';
+import { fetchContacts } from '../redux/contacts/operations';
 import { Box } from '@mui/material';
 
 export const PhonebookPage = () => {

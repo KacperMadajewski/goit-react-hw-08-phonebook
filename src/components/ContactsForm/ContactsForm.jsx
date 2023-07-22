@@ -2,8 +2,8 @@ import css from './ContactsForm.module.css';
 import { useState } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from '../../redux/operations';
-import { selectContacts } from '../../redux/selectors';
+import { addContact } from '../../redux/contacts/operations';
+import { selectContacts } from '../../redux/contacts/selectors';
 import { Button } from '@mui/material';
 import { PersonAdd } from '@mui/icons-material';
 
