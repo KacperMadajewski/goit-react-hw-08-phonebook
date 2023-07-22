@@ -5,7 +5,7 @@ import { Route, Routes } from 'react-router-dom';
 import { Layout } from './Layout/Layout';
 import { PrivateRoute } from './PrivateRoute';
 import { RestrictedRoute } from './RestrictedRoute';
-import { refreshUser } from 'redux/auth/operations';
+import { refreshUser } from 'redux/Auth/operations';
 
 import css from './App.module.css';
 import { Spinner } from '@chakra-ui/react';

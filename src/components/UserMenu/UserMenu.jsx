@@ -1,7 +1,7 @@
 import { useAuth } from 'hooks/useAuth';
 import css from './UserMenu.module.css';
 import { useDispatch } from 'react-redux';
-import { logOut } from 'redux/auth/operations';
+import { logOut } from 'redux/Auth/operations';
 import { Text, Button, ButtonGroup } from '@chakra-ui/react';
 
 export const UserMenu = () => {
