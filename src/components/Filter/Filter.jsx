@@ -1,16 +1,31 @@
-import css from './Filter.module.css'
-import { useDispatch } from 'react-redux';
-import { setFilters } from 'redux/contacts/filterSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { setFilter } from 'redux/contacts/filterSlice';
+import { Heading, Text, Input } from '@chakra-ui/react';
+import css from './Filter.module.css';
 
-export const Filter = () => {
+const Filter = () => {
+  const filter = useSelector(state => state.filter);
   const dispatch = useDispatch();
-  const changeFilter = e => dispatch(setFilters(e.target.value));
+
   return (
-    <div className={css.filter}>
-      <label className={css.label}>
-        <span>Find contacts by name</span>
-        <input type="text" name="filter" onChange={changeFilter} />
-      </label>
+    <div className={css.wrapper}>
+      <Heading className={css.header} size="md">
+        Contacts
+      </Heading>
+      <Text className={css.label}>
+        Find contacts by name:
+        <Input
+          size="sm"
+          className={css.input}
+          type="text"
+          value={filter}
+          autoComplete="off"
+          placeholder="Search name..."
+          onChange={e => dispatch(setFilter(e.currentTarget.value))}
+        />
+      </Text>
     </div>
   );
 };
+
+export default Filter;

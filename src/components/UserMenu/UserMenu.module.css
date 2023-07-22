@@ -6,4 +6,9 @@
 
 .username {
   font-weight: 700;
+  transition: color 200ms linear;
+}
+
+.username:hover {
+  color: #2b6cb0;
 }

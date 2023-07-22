@@ -3,22 +3,9 @@
   text-decoration: none;
   padding: 12px;
   font-weight: 700;
-  color: #020202;
+  color: #2a363b;
 }
 
-
-
-.link:focus{
-  color: black;
-  
-}
-.link:focus::before {
-
- border-bottom: 1px solid #141414;
-  
-}
-.link:focus::after {
-
- border-bottom: 1px solid #141414;
-  
+.link.active {
+  color: #e84a5f;
 }

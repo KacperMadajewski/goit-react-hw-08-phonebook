@@ -1,17 +1,22 @@
-.filter {
-  display: flex;
-  flex-direction: column;
-}
-.filter input {
-  width: 200px;
+.wrapper {
   margin-top: 10px;
-  border: 1px solid rgba(110, 109, 109, 0.815);
-  border-radius: 25px;
-  padding: 4px;
-
-  outline: none;
+  margin-bottom: 20px;
 }
+
+.header {
+  display: flex;
+  justify-content: center;
+}
+
 .label {
   display: flex;
   flex-direction: column;
+  font-weight: 500;
+}
+
+.input {
+  margin-top: 5px;
+  width: 200px;
+  border: 1px solid #2b6cb0;
+  border-radius: 5px;
 }

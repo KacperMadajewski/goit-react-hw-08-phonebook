@@ -7,3 +7,10 @@
   flex-direction: column;
   margin-bottom: 16px;
 }
+
+.button {
+  border: 1px solid #2b6cb0;
+  border-radius: 5px;
+  color: #2b6cb0;
+  padding: 2px 10px;
+}

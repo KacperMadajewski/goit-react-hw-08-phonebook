@@ -1,7 +1,6 @@
-.container {
-  display: grid;
-  gap: 16px;
-  max-width: 1600px;
-  margin: 0 auto;
-  
+.spinner {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
