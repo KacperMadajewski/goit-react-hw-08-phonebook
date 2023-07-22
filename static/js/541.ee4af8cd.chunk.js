@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkreact_homework_template=self.webpackChunkreact_homework_template||[]).push([[541],{1541:function(e,r,a){a.r(r),a.d(r,{default:function(){return s}});var t="HomePage_header__box__CgnSM",n="HomePage_header__title__iAt3a",o=a(3329),s=function(){return(0,o.jsxs)("div",{className:t,children:[(0,o.jsx)("h1",{className:n,children:"Your own Phonebook!"}),(0,o.jsx)("p",{children:"Please register or login"})]})}}}]);
+//# sourceMappingURL=541.ee4af8cd.chunk.js.map
