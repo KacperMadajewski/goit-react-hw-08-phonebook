@@ -1,0 +1,6 @@
+.contactItem {
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

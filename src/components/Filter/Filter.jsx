@@ -1,27 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { useDispatch, useSelector } from 'react-redux';
-import { setFilter } from 'redux/filterSlice';
+import css from './FilterStyle.module.css';
+import { useDispatch } from 'react-redux';
+import { setFilters } from '../../redux/filtersSlice';
 
 export const Filter = () => {
-  const filter = useSelector(state => state.filter);
   const dispatch = useDispatch();
-
+  const changeFilter = e => dispatch(setFilters(e.target.value));
   return (
-      <label>
-      Find contacts by name
-      <input
-        type="text"
-        value={filter}
-        autoComplete="off"
-        placeholder="Write your contact..."
-        onChange={e => dispatch(setFilter(e.currentTarget.value))}
-      />
-    </label>
+    <div className={css.filter}>
+      <label className={css.label}>
+        <span>Find contacts by name</span>
+        <input type="text" name="filter" onChange={changeFilter} />
+      </label>
+    </div>
   );
-};
-
-Filter.propTypes = {
-  onChange: PropTypes.func,
-  filter: PropTypes.any,
 };

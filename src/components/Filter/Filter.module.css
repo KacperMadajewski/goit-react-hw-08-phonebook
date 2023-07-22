@@ -1,5 +1,8 @@
-
-.contactForm input {
+.filter {
+  display: flex;
+  flex-direction: column;
+}
+.filter input {
   width: 200px;
   margin-top: 10px;
   border: 1px solid rgba(110, 109, 109, 0.815);
@@ -8,8 +11,7 @@
 
   outline: none;
 }
-.contactForm label {
-  margin-top: 10px;
-   display: flex;
+.label {
+  display: flex;
   flex-direction: column;
 }

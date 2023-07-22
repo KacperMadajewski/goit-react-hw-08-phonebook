@@ -1,17 +1,5 @@
-import {
-  Box,
-  Button,
-  Card,
-  CardActions,
-  CardContent,
-  CardMedia,
-  Typography,
-} from '@mui/material';
-import { ContactForm } from '../components/ContactForm/ContactForm';
-import { ContactList } from '../components/ContactList/ContactList';
-import { Filter } from '../components/Filter/Filter';
+import { Box, Card, CardContent, Typography } from '@mui/material';
 import '@fontsource/roboto/300.css';
-import { NavLink } from 'react-router-dom';
 
 export const HomePage = () => {
   return (

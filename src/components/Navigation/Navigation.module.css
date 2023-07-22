@@ -1,0 +1,24 @@
+.link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px;
+  font-weight: 700;
+  color: #020202;
+}
+
+
+
+.link:focus{
+  color: black;
+  
+}
+.link:focus::before {
+
+ border-bottom: 1px solid #141414;
+  
+}
+.link:focus::after {
+
+ border-bottom: 1px solid #141414;
+  
+}
