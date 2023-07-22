@@ -44,11 +44,11 @@ const ContactForm = () => {
   }, [dispatch]);
 
   return (
-    <div>
+    <form onSubmit={handleSubmit}>
       <Heading className={css.header} size="md">
         Phonebook
       </Heading>
-      <FormControl className={css.wrapper} onSubmit={handleSubmit}>
+      <FormControl className={css.wrapper}>
         <div className={css.item}>
           <FormLabel>Name:</FormLabel>
           <Input
@@ -83,7 +83,7 @@ const ContactForm = () => {
           <Button colorScheme="blue">Add contact</Button>
         </ButtonGroup>
       </FormControl>
-    </div>
+    </form>
   );
 };
 
