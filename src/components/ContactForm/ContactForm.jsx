@@ -80,7 +80,9 @@ const ContactForm = () => {
         </div>
 
         <ButtonGroup size="sm" variant="outline" spacing="6">
-          <Button colorScheme="blue">Add contact</Button>
+          <Button type="submit" colorScheme="blue">
+            Add contact
+          </Button>
         </ButtonGroup>
       </FormControl>
     </form>
